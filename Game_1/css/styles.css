@@ -1,0 +1,464 @@
+body {
+  font-family: 'Sue Ellen Francisco', cursive;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #71F7FC;
+  background-attachment: fixed;
+}
+
+#heading {
+  display: flex;
+  align-self: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #dbcf16;
+  font-size: 3em;
+  margin-bottom: 0;
+  margin-top: .4rem;
+  font-family: 'Sue Ellen Francisco', cursive;
+  line-height: 4rem;
+  font-weight: bolder;
+  text-shadow: .02em .03em white;
+}
+
+p {
+  margin: 0;
+  line-height: 180%;
+  /*cursor: pointer;*/
+}
+
+
+#stuff {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/0.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35rem;
+  width: 100%;
+  padding-top: .3rem;
+
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+ 
+
+}
+
+
+#score {
+  display: flex;
+  flex-direction: row;
+  text-shadow: .02em .04em #61d2d6;
+  align-self: center;
+  padding-left: 13.5rem;
+}
+
+
+#star1, #star2, #star3 {
+  height: 35px;
+  width: 35px;
+}
+
+#starsTop, #starsBottom {
+  position: absolute;
+  height: 35px;
+}
+
+#starsTop {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+#starsBottom > img {
+  margin-right: 1rem;
+}
+
+#starsTop > img {
+  margin-right: 1.23rem;
+  width: 35px;
+}
+
+#replay {
+  height: 2rem;
+  width: 2.9rem;
+  background-image: url("../images/speakerwhite.svg");
+  background-repeat: no-repeat;
+  z-index: 4;
+  display: inline-block;
+  margin-left: 18rem;
+  margin-top: .1rem;
+}
+
+#replay:hover {
+  background-image: url("../images/speaker.svg");
+  cursor: pointer;
+}
+
+h2 {
+  color: teal;
+  font-size: 6rem;
+  margin-top: 0;
+}
+
+#allCorrections {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+#correction {
+  height: .4rem;
+  padding-top: 2.8rem;
+  padding-bottom: 4.2rem;
+  font-size: 4em;
+  line-height: .4rem;
+  color: #61d2d6;
+
+    -webkit-transition-delay: 5s; /* Safari */
+    transition-delay: 5s;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+
+}
+
+#correctionR {
+  width: 2rem;
+  height: .4rem;
+  padding-top: 2.8rem;
+  padding-bottom: 4.2rem;
+  padding-left: 0;
+  font-size: 4em;
+  line-height: .4rem;
+  color: #61d2d6;
+
+  animation-delay: 2.2s;
+  -webkit-transition-delay: 5s; /* Safari */
+    transition-delay: 5s;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+#pages {
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-9.5deg);
+  align-self: center;
+  padding-left: 3rem;
+}
+
+#pic {
+  height: 6.7rem;
+  width: 11rem;
+  padding-left: 6.5rem;
+  z-index: 1;
+  padding-bottom: 1.1rem;
+}
+
+#sentence {
+ font-size: 1.9em;
+ color: #1a22ff;
+ z-index: 2;
+ font-family: 'Schoolbell', cursive;
+
+}
+
+#sentence2 {
+ height: 45px;
+}
+
+
+span {
+  border-radius: 5px;
+}
+
+button {
+  width: 6rem;
+  height: 3.2rem;
+  border: 2.5px solid #33f774;
+  background: none;
+  color:#33f774;
+  font-size: 30px;
+  border-radius: 20px;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-weight: bolder;
+  line-height: 110%;
+  text-shadow: .02em .04em lightgray;
+  box-shadow: .03em .07em lightgray;
+  align-self: flex-start;
+  padding-bottom: 0;
+  padding-left: .2rem;
+  margin-top: .6rem;
+}
+
+button:hover {
+  color: #61d2d6;
+  border-color: #61d2d6;
+  text-shadow: .02em .04em #52ad9c;
+  box-shadow: .03em .07em #61d2d6;
+}
+
+button:focus {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1a22ff;
+  margin-left: .7rem;
+}
+
+a:hover, span:hover {
+  text-shadow: .03em .04em lightgray;
+}
+
+.fadeOut {
+  animation-delay: 5s;
+}
+
+
+
+
+@media only screen and (max-width : 768px) {
+
+#replay {
+  margin-left: 12rem;
+}
+
+#score {
+  padding-left: 7rem;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+  #sentence1, #sentence2 {
+  font-size: .8em;
+}
+
+  #score {
+    padding-left: 3.5rem;
+  }
+
+  #pages {
+    padding-left: 0;
+  }
+
+  #stuff {
+    background-image: url(../images/longbackground.png);
+    background-position: top;
+    height: 700px;
+  }
+
+  #pic {
+    padding-left: 3rem;
+  }
+
+  button {
+    margin-top: .2rem;
+  }
+
+
+}
+
+
+
+
+
+/*************************/
+
+/*RPS*/
+
+#rpsbody {
+background-color: #1f9a00;
+background-image: url("../images/parktest.png");
+background-size: cover;
+
+
+}
+
+#allRPS {
+
+transform: scale(0.2);
+
+width: 100%;
+height: 40rem;
+background-image: url("../images/lineup.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat; 
+background-attachment: local;
+
+padding-top: .4rem;
+display: flex;
+flex-direction: column;
+align-self: center;
+
+animation-duration: .2s;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+  -webkit-transform: translate3d(0,0,0);
+
+  -webkit-transform-style: preserve-3d;
+
+ /* -webkit-backface-visibility: hidden;*/
+}
+
+
+.scoreboard {
+   display: flex;
+  flex-direction: column;
+
+}
+
+#table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scoreboardTitle{
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #FEDB00;
+  color: #44d6d2;
+  font-weight: bold;
+  line-height: 1.5rem;
+  width: 14rem;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-top: .6rem;
+  padding-bottom: .2rem;
+}
+
+
+table {
+  border-spacing: 0;
+  border-radius: 40px;
+  text-align: center;
+  width: 14rem;
+  }
+
+.tableDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+ } 
+
+td {
+  border: 4px solid #FEDB00;
+  width: 6rem;
+  font-size: 2rem;
+  height: 4rem;
+  color: #bceae8;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+table td:first-child {
+  border-bottom-left-radius: 10px;
+  border-right-width: 1px;
+}
+
+table td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.youMax {
+  width: 10px;
+  margin-right: 0;
+  height: 2rem;
+}
+
+#studentScore, #dogScore {
+    /*animation-duration: 1s;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;*/
+    animation-delay: 3s;
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+   /* -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;*/ 
+    font-family: sans-serif; 
+    font-weight: bold;
+    color: #FEDB00;
+    font-size: 5rem;
+    width: 20px;
+    padding-left: 3rem;
+    line-height: 4rem;
+    text-align: baseline;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#messageOptions {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  padding-left: 10rem;
+}
+
+#message {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 11rem;
+  padding-left: 9.2rem;
+  animation-delay: 2s;
+   -webkit-transition-delay: 2s; 
+    transition-delay: 2s;
+}
+
+#options {
+width: 22rem;
+display: flex;
+flex-direction: row;
+padding-top: 15rem;
+padding-left: 7rem;
+align-items: flex-end;
+align-self: center;
+
+}
+
+#rock {
+  width: 7.6rem;
+  height: 7rem;
+  align-self: flex-end;
+  margin-left: 1.5rem;
+}
+
+#paper {
+  width: 6.6rem;
+  height: 9rem;
+  margin-left: 0;
+  margin-bottom: 5.3rem;
+}
+
+#scissors {
+  width: 7rem;
+  height: 7.8rem;
+  margin-left: 0;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width : 545px) {
+
+#allRPS {
+    background-size: 190%;
+  }
+}
